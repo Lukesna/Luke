@@ -1,15 +1,15 @@
 function [CalAbsCo, formula, nCalibrated] = Calibration(soundo, soundf, pnl, fre, dir, bck, x1, y1, z1, rt, p1)
-SoundOn = soundo;
-SoundOff = soundf;
-Panels = pnl;
-f = fre;
-Direct = dir;
-Bckgrnd = bck;
-x = x1;
-y = y1;
-z = z1;
-P = p1;
-RTarget = rt;
+SoundOn = str2double(soundo);
+SoundOff = str2double(soundf);
+Panels = str2double(pnl);
+f = str2double(fre);
+Direct = str2double(dir);
+Bckgrnd = str2double(bck);
+x = str2double(x1);
+y = str2double(y1);
+z = str2double(z1);
+P = str2double(p1);
+RTarget = str2double(rt);
 
 
 if f >= 250 && f<=400

@@ -1,4 +1,4 @@
-function rt = RTPrediction(abs_coeff,room,formula)
+function rt = RTPrediction(abs_coeff1,room1,formula1)
 %RTEST Estimate reverberation time based on room size and absorption
 %
 %   RT = IOSR.ACOUSTICS.RTEST(ABS_COEFF,ROOM) estimates the reverberation
@@ -10,7 +10,9 @@ function rt = RTPrediction(abs_coeff,room,formula)
 %   be specified. The options are 'sabine' (default), or 'eyring'.
 
 %   Copyright 2016 University of Surrey.
-
+abs_coeff = str2double(abs_coeff1);
+room = str2double(room1);
+formula = str2char(formula1);
 assert(isnumeric(abs_coeff), 'iosr:rtEst:invalidCoeff', 'abs_coeff should be numeric')
 assert(isnumeric(room) & numel(room)==3 & isvector(room), 'iosr:rtEst:invalidRoom', 'room should be a 3-element numeric vector')
 if nargin<3
